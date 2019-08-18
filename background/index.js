@@ -125,7 +125,7 @@ function convertToJsonForCryto(table) {
                 key = key.split(" ");
                 break;
               case "Price (USD)":
-                key = "PriceAsUSD";
+                key = "Price(USD)";
                 break;
               case " Market Cap":
                 key = "MarketCap";
@@ -180,10 +180,10 @@ const compareCurrencyData = (newData) => {
     })
     prevData.cryptoCurrencies.map((oldVal, i) => {
       const newVal = newData.cryptoCurrencies[i];
-      if (newVal.PriceAsUSD > oldVal.PriceAsUSD) {
+      if (newVal['Price(USD)'] > oldVal['Price(USD)']) {
         newVal.status = currencyStatus.INCREASED;
       }
-      else if (newVal.PriceAsUSD === oldVal.PriceAsUSD) {
+      else if (newVal['Price(USD)'] === oldVal['Price(USD)']) {
         newVal.status = currencyStatus.EQUAL;
       }
       else {
