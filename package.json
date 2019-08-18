@@ -1,16 +1,23 @@
 {
-  "name": "live-rate",
-  "version": "0.1.0",
+  "name": "live-exchange-rates",
+  "version": "1.0.0",
+  "description": "live exchange rate chrome extension",
+  "main": "index.js",
+  "repository": "https://github.com/emresandikci/live-exchange-rates.git",
+  "author": "emresandikci <me@emresandikci.com>",
+  "license": "ISC",
   "private": true,
   "dependencies": {
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "styled-components": "^4.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build": "react-scripts build && yarn build:backgroundjs",
+    "build:backgroundjs": "webpack --mode production ./background/ --output ./build/background.js",
+    "copy": "node ./utils/copy.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -27,5 +34,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "webpack-cli": "^3.3.6"
   }
 }
