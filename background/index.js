@@ -155,7 +155,6 @@ function convertToJsonForCryto(table) {
 
 const sendData = (data) => {
   chrome.storage.local.set(data, function () {
-    console.log('sent', data);
   });
 }
 

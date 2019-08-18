@@ -18,11 +18,11 @@ class App extends React.Component {
 
   initializeData = () => {
     chrome.storage.local.get(['currencies', 'cryptoCurrencies'], (data) => {
-      console.log('intialData', data);
+
       this.setState({ response: data });
     });
     chrome.storage.onChanged.addListener((data) => {
-      console.log('data changed', data);
+
       this.setState({ response: { currencies: data.currencies.newValue, cryptoCurrencies: data.cryptoCurrencies.newValue } });
     });
   }

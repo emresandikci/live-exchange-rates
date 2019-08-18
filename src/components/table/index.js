@@ -67,14 +67,8 @@ class Table extends React.Component {
     }
   }
 
-  componentDidUpdate() {
-    console.log('tbl', this.props.data);
-  }
   getChangeClass = (status, column) => {
-    // if (column.trim() !== "Name" || column.trim() !== "Buying" || column.trim() !== "Selling" || column.trim() !== "PriceAsUSD") {
-    //   console.log(typeof(column))
-    //   return '';
-    // }
+
     switch (status) {
       case currencyStatus.INCREASED:
 

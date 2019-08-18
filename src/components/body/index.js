@@ -22,8 +22,8 @@ const cryptoColumns = [
     text: "Name"
   },
   {
-    name: "PriceAsUSD",
-    text: "PriceAsUSD"
+    name: "Price(USD)",
+    text: "Price(USD)"
   }
 ];
 
@@ -31,12 +31,7 @@ class Body extends React.Component {
   constructor(props) {
     super(props);
   }
-  componentDidMount = () => {
-    console.log('body-mount', this.props);
-  }
-  componentDidUpdate = () => {
-    console.log('body-updated', this.props);
-  }
+  
   render() {
     return (
       <React.Fragment>
