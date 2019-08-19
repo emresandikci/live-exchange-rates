@@ -2,10 +2,12 @@ import styled, { createGlobalStyle } from 'styled-components';
 import { colors } from './helper';
 
 const Styles = createGlobalStyle`
-  body{
-    min-width: 400px;
+  html,body{
+    overflow:hidden;
+    height:600px;
+    width: 450px;
     min-height:600px;
-    max-height:650px;
+    max-height:450px;
     margin:0;
     padding:0;
   }
