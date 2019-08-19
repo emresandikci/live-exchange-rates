@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "browser_action": {
     "default_popup": "index.html",
-    "default_title": "Open the popup"
+    "default_title": "Live Exchange Rate"
   },
   "icons": {
     "16": "./images/png/logo-1@3x.png",
