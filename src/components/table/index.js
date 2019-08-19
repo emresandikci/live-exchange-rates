@@ -12,7 +12,7 @@ const Style = createGlobalStyle`
   }
   tbody {
     display:block;
-    height:600px;
+    height:400px;
     overflow-y:scroll;
   }
   thead, tbody tr {
@@ -22,7 +22,6 @@ const Style = createGlobalStyle`
   }
   thead{
     background-color:transparent;
-
   }
   th{
     background-color:${colors.table.th};
@@ -52,9 +51,6 @@ const Style = createGlobalStyle`
   .decreased{
     background-color:${colors.red.rgbaPrimary};
     color:${colors.red.primary}
-  }
-  .equal{
-    background-color:${colors.table.th};
   }
 `;
 
